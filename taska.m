@@ -1,7 +1,7 @@
 clc;
 close all;
-% load HouseTallBasler64;
-load affrec3;
+load HouseTallBasler64;
+% load affrec1;
 % xpoints = W(1:NrFrames,:);
 % ypoints = W(NrFrames+1:end,:);
 % tx = mean(xpoints,2);

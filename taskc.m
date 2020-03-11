@@ -1,8 +1,8 @@
 function [] = taskc()
     clc;
     close all;
-%     load HouseTallBasler64;
-    load affrec3;
+    load HouseTallBasler64;
+%     load affrec3;
     m = size(W,1)/2;
     n = size(W,2);
      t = mean(W, 2);
@@ -32,13 +32,13 @@ function [] = taskc()
     xlabel('x'); 
     ylabel('y'); 
     zlabel('z');
-    figure(2);
-    plot3(X(1, :), X(2,:), X(3,:),'.');
-    grid on;
-    title('Original');
-    xlabel('x'); 
-    ylabel('y'); 
-    zlabel('z');
+%     figure(2);
+%     plot3(X(1, :), X(2,:), X(3,:),'.');
+%     grid on;
+%     title('Original');
+%     xlabel('x'); 
+%     ylabel('y'); 
+%     zlabel('z');
 end
 
 
@@ -68,5 +68,5 @@ function [Ps,Xs,cond,xs] = fsvd(xs)
     S = S/S(1,1);
     cond = [S(4,4),S(5,5)];
     Ps = fliplr(U(:,1:4));  
-    Xs = (5*S(1:4,1:4)*V(:,1:4)');
+    Xs = (S(1:4,1:4)*V(:,1:4)');
 end
